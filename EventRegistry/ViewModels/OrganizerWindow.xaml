@@ -1,0 +1,17 @@
+﻿<Window x:Class="EventRegistrationApp.OrganizerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Организатор" Height="400" Width="400">
+	<StackPanel Margin="20">
+		<TextBlock Text="Регистрация мероприятия" FontSize="16" Margin="0,0,0,10"/>
+		<TextBox x:Name="TitleTextBox" Text="Название" Margin="0,5"/>
+		<DatePicker x:Name="EventDatePicker" Margin="0,5"/>
+		<ComboBox x:Name="FormatComboBox" Margin="0,5">
+			<ComboBoxItem Content="Онлайн"/>
+			<ComboBoxItem Content="Офлайн"/>
+		</ComboBox>
+		<Button Content="Добавить" Click="AddEventButton_Click" Margin="0,10"/>
+		<ListBox ItemsSource="{Binding Events}" DisplayMemberPath="Title"/>
+		<Button Content="Назад" Click="BackButton_Click" Margin="0,10" HorizontalAlignment="Left"/>
+	</StackPanel>
+</Window>
